@@ -61,6 +61,7 @@ export default class extends wepy.app {
             'example/loadmore',
             'example/panel',
             'example/preview',
+            'example/richtext',
             'example/progress',
 
             'example/actionsheet',
