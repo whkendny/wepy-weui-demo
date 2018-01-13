@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding-top: 15px;
     width: 60%;
+    font-size: 14rpx;
 }
 .mini-btn{
     margin-right: 5px;
@@ -35,6 +36,21 @@
                 <button class="weui-btn mini-btn" type="default" size="mini">按钮</button>
                 <button class="weui-btn mini-btn" type="warn" size="mini">按钮</button>
             </view>
+
+            <view class="page__bd_spacing">
+              {{disabled}}
+                <button class="weui-btn" type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+                        disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"> default --{{disabled}} </button>
+                <button class="weui-btn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+                        disabled="{{disabled}}" bindtap="primary"> primary </button>
+                <button class="weui-btn" type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}"
+                        disabled="{{disabled}}" bindtap="warn"> warn </button>
+
+                <button class="weui-btn" bindtap="setDisabled">点击设置以上按钮disabled属性</button>
+                <button class="weui-btn" bindtap="setPlain">点击设置以上按钮plain属性</button>
+                <button class="weui-btn" bindtap="setLoading">点击设置以上按钮loading属性</button>
+                <button class="weui-btn" open-type="contact">进入客服会话</button>
+            </view>
         </view>
     </view>
 </template>
@@ -43,6 +59,26 @@
     import wepy from 'wepy';
 
     export default class Button extends wepy.page {
+        data = {
+            defaultSize: 'default',
+            primarySize: 'default',
+            warnSize: 'default',
+            disabled: false,
+            plain: false,
+            loading: false,
+            types: ['default', 'primary', 'warn']
+        };
 
+        methods = {
+            setDisabled(e) {
+                this.disabled = !this.disabled;
+            },
+            setPlain(e) {
+                this.plain = !this.plain;
+            },
+            setLoading(e) {
+                this.loading = !this.loading;
+            }
+        }
     }
 </script>
