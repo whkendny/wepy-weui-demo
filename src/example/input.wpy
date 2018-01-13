@@ -49,7 +49,7 @@
                         <view class="weui-label">qq</view>
                     </view>
                     <view class="weui-cell__bd">
-                        <input class="weui-input" placeholder="请输入qq" />
+                        <input class="weui-input" placeholder="请输入qq" type="number" confirm-type="send" />
                     </view>
                 </view>
                 <view class="weui-cell weui-cell_input weui-cell_vcode">
@@ -57,7 +57,7 @@
                         <view class="weui-label">手机号</view>
                     </view>
                     <view class="weui-cell__bd">
-                        <input class="weui-input" placeholder="请输入手机号" />
+                        <input class="weui-input" placeholder="请输入手机号" confirm-type="done" />
                     </view>
                     <view class="weui-cell__ft">
                         <view class="weui-vcode-btn">获取验证码</view>
@@ -88,7 +88,7 @@
                         <view class="weui-label">验证码</view>
                     </view>
                     <view class="weui-cell__bd">
-                        <input class="weui-input" placeholder="请输入验证码" />
+                        <input class="weui-input" placeholder="请输入验证码" confirm-type="next" />
                     </view>
                     <view class="weui-cell__ft">
                         <image class="weui-vcode-img" src="../images/vcode.png" style="width: 108px"></image>

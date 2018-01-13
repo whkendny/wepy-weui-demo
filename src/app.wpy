@@ -44,12 +44,14 @@ export default class extends wepy.app {
 
     config = {
         'pages': [
+            'example/pickerview',
             'example/index',
             'example/form',
             'example/button',
             'example/checkbox',
             'example/list',
             'example/input',
+            'example/picker',
             'example/slider',
             'example/uploader',
 
@@ -71,7 +73,6 @@ export default class extends wepy.app {
             'example/msg',
             'example/msg_fail',
             'example/msg_success',
-            'example/picker',
             'example/toast',
 
             'example/navbar',

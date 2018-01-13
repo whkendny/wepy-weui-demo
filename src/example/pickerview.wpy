@@ -1,0 +1,81 @@
+<style>
+page{
+    background-color: #FFFFFF;
+}
+</style>
+<template>
+    <view class="page">
+        <view class="page__hd">
+            <view class="page__title">Picker-view</view>
+            <view class="page__desc">嵌入页面的选择器</view>
+            <view>{{year}}年{{month}}月{{day}}日</view>
+        </view>
+        <view class="page__bd">
+            <view class="weui-btn-area">
+                <!--mode: 默认值selector-->
+                <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+                    <picker-view-column>
+                        <view wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+                    </picker-view-column>
+                    <picker-view-column>
+                        <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+                    </picker-view-column>
+                    <picker-view-column>
+                        <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+                    </picker-view-column>
+                </picker-view>
+            </view>
+        </view>
+    </view>
+</template>
+
+<script>
+    import wepy from 'wepy';
+    // 这里的date, years, months等变量是否可以放在一个合理的位置
+    const date = new Date();
+    const years = [];
+    const months = [];
+    const days = [];
+    for (let i = 1990; i <= date.getFullYear(); i++) {
+        years.push(i);
+    }
+
+    for (let i = 1; i <= 12; i++) {
+        months.push(i);
+    }
+
+    for (let i = 1; i <= 31; i++) {
+        days.push(i);
+    }
+
+    export default class Pickerview extends wepy.page {
+        data = {
+            years: years,
+            year: date.getFullYear(),
+            months: months,
+            month: 2,
+            days: days,
+            day: 2,
+            value: [9999, 1, 1],
+        };
+        methods = {
+            bindChange (e) {
+                const val = e.detail.value;
+                this.year = this.years[val[0]];
+                this.month = this.months[val[1]];
+                this.day = this.days[val[2]];
+                // 下面都无效
+//                this.setData({
+//                    year: this.years[val[0]],
+//                    month: this.months[val[1]],
+//                    day: this.days[val[2]]
+//
+//                    year: this.data.years[val[0]],
+//                    month: this.data.months[val[1]],
+//                    day: this.data.days[val[2]]
+//                });
+                console.log(this.data.year);
+            }
+        }
+    }
+</script>
