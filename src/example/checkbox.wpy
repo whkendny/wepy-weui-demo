@@ -1,0 +1,28 @@
+<template>
+  <checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{items}}">
+      <checkbox value="{{item.name}}" checked="{{item.checked}}" color="{{item.color}}" disabled="{{item.disabled}}"/>{{item.value}}
+    </label>
+  </checkbox-group>
+</template>
+
+<script>
+import wepy from 'wepy';
+
+export default class Checkbox extends wepy.page {
+    data = {
+        items: [
+            {name: 'USA', value: '美国', color: '#ff063a'},
+            {name: 'CHN', value: '中国', checked: 'true'},
+            {name: 'BRA', value: '巴西', disabled: 'false'},
+            {name: 'JPN', value: '日本'},
+            {name: 'ENG', value: '英国'},
+            {name: 'TUR', value: '法国'},
+        ]
+    }
+
+    checkboxChange(e) {
+        console.log('checkbox发生change事件，携带value值为：', e.detail.value);
+    }
+}
+</script>
