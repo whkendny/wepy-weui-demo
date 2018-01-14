@@ -1,0 +1,27 @@
+<style>
+slider{
+    margin-bottom: 30px;
+}
+</style>
+<template>
+    <view class="body-view">
+        <switch checked @change="switch1Change"/>
+        <switch @change="switch2Change"/>
+    </view>
+</template>
+
+<script>
+    import wepy from 'wepy';
+
+    export default class Switch extends wepy.page {
+
+        methods = {
+            switch1Change (e) {
+                console.log('switch1 发生 change 事件，携带值为', e.detail.value);
+            },
+            switch2Change (e) {
+                console.log('switch2 发生 change 事件，携带值为', e.detail.value);
+            }
+        }
+    }
+</script>

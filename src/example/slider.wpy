@@ -15,6 +15,28 @@ slider{
             <slider min="20" max="80" color="red" active-color="blue" background-color="yellow"/>
             <slider show-value value="50" step="5" @change="mychange"/>
         </view>
+
+        <view class="section section_gap">
+            <text class="section__title">设置step</text>
+            <view class="body-view">
+                <slider @change="slider2change" step="5"/>
+            </view>
+        </view>
+
+        <view class="section section_gap">
+            <text class="section__title">显示当前value</text>
+            <view class="body-view">
+                <slider @change="slider3change" show-value/>
+            </view>
+        </view>
+
+        <view class="section section_gap">
+            <text class="section__title">设置最小/最大值</text>
+            <view class="body-view">
+                <slider activeColor="red" @change="slider4change" min="50" max="200" show-value/>
+            </view>
+        </view>
+
     </view>
 </template>
 
@@ -26,6 +48,15 @@ slider{
         methods = {
             mychange (e) {
                 console.log(`value is ${e.detail.value}`);
+            },
+            slider2change (e) {
+                console.log('slider 2 发生 change 事件，携带值为', e.detail.value);
+            },
+            slider3change (e) {
+                console.log('slider 3 发生 change 事件，携带值为', e.detail.value);
+            },
+            slider4change (e) {
+                console.log('slider 4 发生 change 事件，携带值为', e.detail.value);
             }
         }
     }

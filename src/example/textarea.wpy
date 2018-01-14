@@ -1,0 +1,58 @@
+<style>
+.weui-progress{
+    margin-bottom: 24px;
+}
+textarea{
+    border: 1px solid rebeccapurple;
+}
+</style>
+<template>
+    <view class="section">
+        <textarea bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" />
+    </view>
+    <view class="section">
+        <textarea placeholder="placeholder颜色是红色的" placeholder-style="color:red;"  />
+    </view>
+    <view class="section">
+        <textarea placeholder="这是一个可以自动聚焦的textarea" auto-focus />
+    </view>
+    <view class="section">
+        <textarea placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}" />
+        <view class="btn-area">
+            <button bindtap="bindButtonTap">使得输入框获取焦点</button>
+        </view>
+    </view>
+    <view class="section">
+        <form bindsubmit="bindFormSubmit">
+            <textarea placeholder="form 中的 textarea" name="textarea"/>
+            <button form-type="submit"> 提交 </button>
+        </form>
+    </view>
+</template>
+
+<script>
+    import wepy from 'wepy';
+
+    export default class Textarea extends wepy.page {
+
+        data={
+            height: 20,
+            focus: false
+        }
+
+        methods = {
+            bindButtonTap() {
+              this.focus = true;
+//                this.setData({
+//                    focus: true
+//                })
+            },
+            bindTextAreaBlur(e) {
+                console.log(e.detail.value)
+            },
+            bindFormSubmit(e) {
+                console.log(e.detail.value)
+            }
+        }
+    }
+</script>
