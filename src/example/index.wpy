@@ -102,7 +102,7 @@
                     id: 'widget',
                     name: '基础组件',
                     open: false,
-                    pages: ['article', 'badge', 'flex', 'footer', 'gallery', 'grid', 'icons', 'loadmore', 'panel', 'preview', 'textarea',  'progress']
+                    pages: ['article', 'badge', 'flex', 'footer', 'gallery', 'grid', 'icons', 'loadmore', 'panel', 'preview', 'textarea', 'progress']
                 },
                 {
                     id: 'feedback',
@@ -126,7 +126,25 @@
                     id: 'audio',
                     name: '媒体组件',
                     open: false,
-                    pages: ['audio', 'radio', 'image', 'camera']
+                    pages: ['audio', 'video', 'image', 'camera', 'livemedia']
+                },
+                {
+                    id: 'map',
+                    name: '地图',
+                    open: false,
+                    pages: ['map']
+                },
+                {
+                    id: 'canvas',
+                    name: '画布',
+                    open: false,
+                    pages: ['canvas']
+                },
+                {
+                    id: 'network',
+                    name: '画布',
+                    open: false,
+                    pages: ['network']
                 }
             ]
         };

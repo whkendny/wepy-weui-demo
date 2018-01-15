@@ -1,0 +1,23 @@
+<template>
+    <view>live-player</view>
+
+    <live-player src="https://domain/pull_stream" mode="RTC" autoplay @statechange="statechange" binderror="error1" style="width: 300px; height: 225px;" />
+
+    <view>live-pusher</view>
+    <live-pusher url="https://domain/push_stream" mode="RTC" autopush bindstatechange="statechange" style="width: 300px; height: 225px;" />
+</template>
+
+<script>
+import wepy from 'wepy';
+
+export default class livemedia extends wepy.page {
+    methods = {
+        statechange(e) {
+            console.log('live-player code:', e.detail.code);
+        },
+        error1(e) {
+            console.error('live-player error:', e.detail.errMsg);
+        }
+    }
+}
+</script>

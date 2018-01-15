@@ -1,0 +1,11 @@
+<template>
+    <view>网络请求</view>
+</template>
+
+<script>
+import wepy from 'wepy';
+
+export default class Camera extends wepy.page {
+    methods = {}
+}
+</script>

@@ -14,17 +14,17 @@ textarea{
         <textarea placeholder="placeholder颜色是红色的" placeholder-style="color:red;"  />
     </view>
     <view class="section">
-        <textarea placeholder="这是一个可以自动聚焦的textarea" auto-focus />
+        <textarea placeholder="这是一个可以自动聚焦的textarea" auto-focus ></textarea>
     </view>
     <view class="section">
-        <textarea placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}" />
+        <textarea placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}" ></textarea>
         <view class="btn-area">
             <button bindtap="bindButtonTap">使得输入框获取焦点</button>
         </view>
     </view>
     <view class="section">
         <form bindsubmit="bindFormSubmit">
-            <textarea placeholder="form 中的 textarea" name="textarea"/>
+            <textarea placeholder="form 中的 textarea" name="textarea"></textarea>
             <button form-type="submit"> 提交 </button>
         </form>
     </view>
@@ -42,16 +42,16 @@ textarea{
 
         methods = {
             bindButtonTap() {
-              this.focus = true;
+                this.focus = true;
 //                this.setData({
 //                    focus: true
 //                })
             },
             bindTextAreaBlur(e) {
-                console.log(e.detail.value)
+                console.log(e.detail.value);
             },
             bindFormSubmit(e) {
-                console.log(e.detail.value)
+                console.log(e.detail.value);
             }
         }
     }

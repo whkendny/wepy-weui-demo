@@ -83,6 +83,16 @@ export default class extends wepy.app {
             'example/searchbar',
 
             'example/audio',
+            'example/video',
+            'example/image',
+            'example/camera',
+            'example/livemedia',
+
+            'example/map',
+
+            'example/canvas',
+
+            'example/network',
         ],
         'window': {
             'navigationBarTextStyle': 'black',
