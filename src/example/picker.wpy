@@ -14,6 +14,7 @@ page{
                 <!--mode: 默认值selector-->
                 <picker mode="selector" @change="bindPickerChange" value="{{index}}" range="{{array}}">
                     <button type="default">单列选择器</button>
+                    {{array[index]}}
                 </picker>
 
                 <picker class="weui-btn" mode="multiSelector" value="{{date}}" @change="bindMultiPickerChange" @columnchange="bindMultiPickerColumnChange"
