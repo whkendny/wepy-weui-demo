@@ -89,7 +89,12 @@
     import wepy from 'wepy';
 
     export default class Index extends wepy.page {
-
+        config = {
+          'backgroundColor': 'yellow',
+          'backgroundTextStyle': 'red',
+          'enablePullDownRefresh': true,
+          'onReachBottomDistance': 100
+        }
         data = {
             list: [
                 {
@@ -102,7 +107,7 @@
                     id: 'widget',
                     name: '基础组件',
                     open: false,
-                    pages: ['article', 'badge', 'flex', 'footer', 'gallery', 'grid', 'icons', 'loadmore', 'panel', 'preview', 'textarea', 'progress']
+                    pages: ['article', 'badge', 'flex', 'footer', 'gallery', 'grid', 'icons', 'loadmore', 'panel', 'preview', 'textarea', 'progress', 'swiper']
                 },
                 {
                     id: 'feedback',

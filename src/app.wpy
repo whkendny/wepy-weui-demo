@@ -44,7 +44,6 @@ export default class extends wepy.app {
 
     config = {
         'pages': [
-            'example/swiper',
             'example/index',
             'example/form',
             'example/button',
@@ -70,7 +69,7 @@ export default class extends wepy.app {
             'example/preview',
             'example/textarea',
             'example/progress',
-            // 'example/swiper',
+            'example/swiper',
 
             'example/actionsheet',
             'example/dialog',
@@ -100,14 +99,19 @@ export default class extends wepy.app {
             'navigationBarTextStyle': 'black',
             'navigationBarTitleText': 'WeUI in WePY',
             'navigationBarBackgroundColor': '#f8f8f8',
-            'backgroundColor': '#f8f8f8'
+            'backgroundColor': 'yellow',
+            'backgroundTextStyle': 'dark',
+            'enablePullDownRefresh': true,
+            'backgroundColorTop': 'red',
+            'backgroundColorBottom': 'blue'
         },
         'networkTimeout': {
             'request': 10000,
             'connectSocket': 10000,
             'uploadFile': 10000,
             'downloadFile': 10000
-        }
+        },
+        'debug': true
     };
 
     constructor () {
