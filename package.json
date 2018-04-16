@@ -54,7 +54,9 @@
   "bugs": {
     "url": "https://github.com/wepyjs/wepy-com-toast/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "wepy": "^1.7.1"
+  },
   "description": "![toast](https://cloud.githubusercontent.com/assets/2182004/21178902/8f98f056-c22c-11e6-90ee-a9afa73399b9.jpg)",
   "devDependencies": {
     "babel": "^6.5.2",
@@ -88,6 +90,7 @@
     "url": "git+ssh://git@github.com/wepyjs/wepy-com-toast.git"
   },
   "scripts": {
+    "dev": "wepy build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "1.0.2"

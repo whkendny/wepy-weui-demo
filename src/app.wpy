@@ -44,6 +44,7 @@ export default class extends wepy.app {
 
     config = {
         'pages': [
+            'example/swiper',
             'example/index',
             'example/form',
             'example/button',
@@ -69,6 +70,7 @@ export default class extends wepy.app {
             'example/preview',
             'example/textarea',
             'example/progress',
+            // 'example/swiper',
 
             'example/actionsheet',
             'example/dialog',
