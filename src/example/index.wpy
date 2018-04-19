@@ -147,9 +147,15 @@
                 },
                 {
                     id: 'network',
-                    name: '画布',
+                    name: '网络',
                     open: false,
                     pages: ['network']
+                },
+                {
+                  id: 'animation',
+                  name: '动画',
+                  open: false,
+                  pages: ['animation']
                 }
             ]
         };

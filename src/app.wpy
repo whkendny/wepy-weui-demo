@@ -94,6 +94,8 @@ export default class extends wepy.app {
             'example/canvas',
 
             'example/network',
+
+            'example/animation',
         ],
         'window': {
             'navigationBarTextStyle': 'black',
